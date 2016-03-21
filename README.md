@@ -24,15 +24,26 @@
 ------------------------------------------------------------------------------
     + Les 5 règles à suivre pour implémenter REST
       - l’URI comme identifiant des ressources
-        . REST se base sur les URI (Uniform Resource Identifier) afin d’identifier une ressource. Ainsi une application se doit de construire ses URI (et donc ses URL) de manière précise, en tenant compte des contraintes REST. Il est nécessaire de prendre en compte la hiérarchie des ressources et la sémantique des URL pour les édite
+        . REST se base sur les URI (Uniform Resource Identifier) afin d’identifier une ressource.
+          Ainsi une application se doit de construire ses URI (et donc ses URL) de manière précise, en tenant compte des contraintes REST.
+          Il est nécessaire de prendre en compte la hiérarchie des ressources et la sémantique des URL pour les édite
       - les verbes HTTP comme identifiant des opérations
-        . utiliser les verbes HTTP existants plutôt que d’inclure l’opération dans l’URI de la ressource. Ainsi, généralement pour une ressource, il y a 4 opérations possibles (cf CRUD)
+        . Utiliser les verbes HTTP existants plutôt que d’inclure l’opération dans l’URI de la ressource.
+          Ainsi, généralement pour une ressource, il y a 4 opérations possibles (cf CRUD)
       - les réponses HTTP comme représentation des ressources
-        . Il est important d’avoir à l’esprit que la réponse envoyée n’est pas une ressource, c’est la représentation d’une ressource. Ainsi, une ressource peut avoir plusieurs représentations dans des formats divers : HTML, XML, CSV, JSON, etc. C’est au client de définir quel format de réponse il souhaite reçevoir via l’entête Accept. Il est possible de définir plusieurs formats.
+        . Il est important d’avoir à l’esprit que la réponse envoyée n’est pas une ressource, c’est la représentation d’une ressource.
+          Ainsi, une ressource peut avoir plusieurs représentations dans des formats divers : HTML, XML, CSV, JSON, etc.
+          C’est au client de définir quel format de réponse il souhaite reçevoir via l’entête Accept.
+          Il est possible de définir plusieurs formats.
       - les liens comme relation entre ressources
-        . es liens d’une ressource vers une autre ont tous une chose en commun : ils indiquent la présence d’une relation. Il est cependant possible de la décrire afin d’améliorer la compréhension du système. Pour expliciter cette description et indiquer la nature de la relation, l’attribut rel doit être spécifier sur tous les liens
+        . les liens d’une ressource vers une autre ont tous une chose en commun : ils indiquent la présence d’une relation.
+          Il est cependant possible de la décrire afin d’améliorer la compréhension du système.
+          Pour expliciter cette description et indiquer la nature de la relation, l’attribut rel doit être spécifier sur tous les liens
       - un paramètre comme jeton d’authentification
-        . C’est un des sujets les plus souvent abordé quand on parle de REST : comment authentifier une requête ? La réponse est très simple et est massivement utilisée par des APIs renommées (Google, Yahoo, etc.) : le jeton d’authentification. Chaque requête est envoyée avec un jeton (token) passé en paramètre $_GET de la requête. Ce jeton temporaire est obtenu en envoyant une première requête d’authentification puis en le combinant avec nos requêtes.
+        . C’est un des sujets les plus souvent abordé quand on parle de REST : comment authentifier une requête ?
+          La réponse est très simple et est massivement utilisée par des APIs renommées (Google, Yahoo, etc.): le jeton d’authentification.
+          Chaque requête est envoyée avec un jeton (token) passé en paramètre $_GET de la requête.
+          Ce jeton temporaire est obtenu en envoyant une première requête d’authentification puis en le combinant avec nos requêtes.
           => demande d’authentification
           => accès aux ressources
 ------------------------------------------------------------------------------
