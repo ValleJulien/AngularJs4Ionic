@@ -17,9 +17,9 @@ angular.module('app.routes', [])
   })
 
   .state('filmTitle', {
-      url: '/page4/:id',
-      templateUrl: 'templates/filmTitle.html',
-      controller: 'filmTitleCtrl'
+    url: '/page2',
+    templateUrl: 'templates/filmTitle.html',
+    controller: 'filmTitleCtrl'
   })
 
 $urlRouterProvider.otherwise('/page1')
